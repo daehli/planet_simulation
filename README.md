@@ -1,4 +1,4 @@
-# TP4 - Graphe de scène et texture  
+# Graphe de scène et texture  
 
 Présenté par **Daehli Nadeau-Otis**
 
