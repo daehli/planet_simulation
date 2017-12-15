@@ -1,0 +1,251 @@
+<div id="planet">
+<p id="earthVertexShader">
+  varying vec3 worldPosition;
+  varying vec2 vUv;
+  void main()
+  {
+  vec4 worldPos = modelMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * worldPos;
+  worldPosition = worldPos.xyz;
+  vUv = uv;
+  }
+</p>
+<p id="earthFragmentShader">
+  varying vec3 worldPosition;
+  uniform sampler2D earthmap; //déclaration de l'uniform de texture. Sa valeur sera attribuée depuis le code javascript.
+  varying vec2 vUv
+  void main()
+  {
+  vec4 color = texture2D(earthmap, vUv.xy);
+  gl_FragColor = vec4(color.rgb, 1.0);
+  }
+</p>
+
+<p id="jupiterVertexShader">
+  varying vec3 worldPosition;
+  void main()
+  {
+  vec4 worldPos = modelMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * worldPos;
+  worldPosition = worldPos.xyz;
+  }
+</p>
+<p id="jupiterFragmentShader">
+  varying vec3 worldPosition;
+  uniform sampler2D jupitermap; //déclaration de l'uniform de texture. Sa valeur sera attribuée depuis le code javascript.
+  void main()
+  {
+  vec4 color = texture2D(jupitermap, worldPosition.xy);
+  gl_FragColor = vec4(color.rgb, 1.0);
+  }
+</p>
+
+<p id="marsVertexShader">
+  varying vec3 worldPosition;
+  void main()
+  {
+  vec4 worldPos = modelMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * worldPos;
+  worldPosition = worldPos.xyz;
+  }
+</p>
+<p id="marsFragmentShader">
+  varying vec3 worldPosition;
+  uniform sampler2D marsmap; //déclaration de l'uniform de texture. Sa valeur sera attribuée depuis le code javascript.
+  void main()
+  {
+  vec4 color = texture2D(marsmap, worldPosition.xy);
+  gl_FragColor = vec4(color.rgb, 1.0);
+  }
+</p>
+
+<p id="mercuryVertexShader">
+  varying vec3 worldPosition;
+  void main()
+  {
+  vec4 worldPos = modelMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * worldPos;
+  worldPosition = worldPos.xyz;
+  }
+</p>
+<p id="mercuryFragmentShader">
+  varying vec3 worldPosition;
+  uniform sampler2D mercurymap; //déclaration de l'uniform de texture. Sa valeur sera attribuée depuis le code javascript.
+  void main()
+  {
+  vec4 color = texture2D(mercurymap, worldPosition.xy);
+  gl_FragColor = vec4(color.rgb, 1.0);
+  }
+</p>
+
+<p id="moonVertexShader">
+  varying vec3 worldPosition;
+  void main()
+  {
+  vec4 worldPos = modelMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * worldPos;
+  worldPosition = worldPos.xyz;
+  }
+</p>
+<p id="moonFragmentShader">
+  varying vec3 worldPosition;
+  uniform sampler2D moonmap; //déclaration de l'uniform de texture. Sa valeur sera attribuée depuis le code javascript.
+  void main()
+  {
+  vec4 color = texture2D(moonmap, worldPosition.xy);
+  gl_FragColor = vec4(color.rgb, 1.0);
+  }
+</p>
+
+<p id="neptuneVertexShader">
+  varying vec3 worldPosition;
+  void main()
+  {
+  vec4 worldPos = modelMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * worldPos;
+  worldPosition = worldPos.xyz;
+  }
+</p>
+<p id="neptuneFragmentShader">
+  varying vec3 worldPosition;
+  uniform sampler2D neptunemap; //déclaration de l'uniform de texture. Sa valeur sera attribuée depuis le code javascript.
+  void main()
+  {
+  vec4 color = texture2D(neptunemap, worldPosition.xy);
+  gl_FragColor = vec4(color.rgb, 1.0);
+  }
+</p>
+
+<p id="plutoVertexShader">
+  varying vec3 worldPosition;
+  void main()
+  {
+  vec4 worldPos = modelMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * worldPos;
+  worldPosition = worldPos.xyz;
+  }
+</p>
+<p id="plutoFragmentShader">
+  varying vec3 worldPosition;
+  uniform sampler2D plutomap; //déclaration de l'uniform de texture. Sa valeur sera attribuée depuis le code javascript.
+  void main()
+  {
+  vec4 color = texture2D(plutomap, worldPosition.xy);
+  gl_FragColor = vec4(color.rgb, 1.0);
+  }
+</p>
+
+<p id="saturnVertexShader">
+  varying vec3 worldPosition;
+  void main()
+  {
+  vec4 worldPos = modelMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * worldPos;
+  worldPosition = worldPos.xyz;
+  }
+</p>
+<p id="saturnFragmentShader">
+  varying vec3 worldPosition;
+  uniform sampler2D saturnmap; //déclaration de l'uniform de texture. Sa valeur sera attribuée depuis le code javascript.
+  void main()
+  {
+  vec4 color = texture2D(saturnmap, worldPosition.xy);
+  gl_FragColor = vec4(color.rgb, 1.0);
+  }
+</p>
+
+<p id="sunVertexShader">
+  varying vec3 worldPosition;
+  void main()
+  {
+  vec4 worldPos = modelMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * worldPos;
+  worldPosition = worldPos.xyz;
+  }
+</p>
+<p id="sunFragmentShader">
+  varying vec3 worldPosition;
+  uniform sampler2D sunmap; //déclaration de l'uniform de texture. Sa valeur sera attribuée depuis le code javascript.
+  void main()
+  {
+  vec4 color = texture2D(sunmap, worldPosition.xy);
+  gl_FragColor = vec4(color.rgb, 1.0);
+  }
+</p>
+
+<p id="uranusVertexShader">
+  varying vec3 worldPosition;
+  void main()
+  {
+  vec4 worldPos = modelMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * worldPos;
+  worldPosition = worldPos.xyz;
+  }
+</p>
+<p id="uranusFragmentShader">
+  varying vec3 worldPosition;
+  uniform sampler2D uranusmap; //déclaration de l'uniform de texture. Sa valeur sera attribuée depuis le code javascript.
+  void main()
+  {
+  vec4 color = texture2D(uranusmap, worldPosition.xy);
+  gl_FragColor = vec4(color.rgb, 1.0);
+  }
+</p>
+
+<p id="venusVertexShader">
+  varying vec3 worldPosition;
+  void main()
+  {
+  vec4 worldPos = modelMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * worldPos;
+  worldPosition = worldPos.xyz;
+  }
+</p>
+<p id="venusFragmentShader">
+  varying vec3 worldPosition;
+  uniform sampler2D venusmap; //déclaration de l'uniform de texture. Sa valeur sera attribuée depuis le code javascript.
+  void main()
+  {
+  vec4 color = texture2D(venusmap, worldPosition.xy);
+  gl_FragColor = vec4(color.rgb, 1.0);
+  }
+</p>
+
+<p id="saturnringcolorVertexShader">
+  varying vec3 worldPosition;
+  void main()
+  {
+  vec4 worldPos = modelMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * worldPos;
+  worldPosition = worldPos.xyz;
+  }
+</p>
+<p id="saturnringcolorFragmentShader">
+  varying vec3 worldPosition;
+  uniform sampler2D saturnringcolor; //déclaration de l'uniform de texture. Sa valeur sera attribuée depuis le code javascript.
+  void main()
+  {
+  vec4 color = texture2D(saturnringcolor, worldPosition.xy);
+  gl_FragColor = vec4(color.rgb, 1.0);
+  }
+</p>
+
+<p id="uranusringcolourVertexShader">
+  varying vec3 worldPosition;
+  void main()
+  {
+  vec4 worldPos = modelMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * worldPos;
+  worldPosition = worldPos.xyz;
+  }
+</p>
+<p id="uranusringcolourFragmentShader">
+  varying vec3 worldPosition;
+  uniform sampler2D uranusringcolour; //déclaration de l'uniform de texture. Sa valeur sera attribuée depuis le code javascript.
+  void main()
+  {
+  vec4 color = texture2D(uranusringcolour, worldPosition.xy);
+  gl_FragColor = vec4(color.rgb, 1.0);
+  }
+</p>
+</div>
